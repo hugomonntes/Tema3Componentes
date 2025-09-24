@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.tema3componentes"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.tema3componentes"
