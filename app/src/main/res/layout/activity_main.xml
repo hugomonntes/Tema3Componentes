@@ -53,9 +53,12 @@
         android:id="@+id/divider"
         android:layout_width="409dp"
         android:layout_height="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
         android:background="?android:attr/listDivider"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        tools:layout_editor_absoluteX="1dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -83,9 +86,11 @@
         android:layout_width="409dp"
         android:layout_height="1dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
         android:background="?android:attr/listDivider"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        tools:layout_editor_absoluteX="-14dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <ToggleButton
         android:id="@+id/toggleButton"
@@ -103,9 +108,12 @@
         android:id="@+id/divider4"
         android:layout_width="409dp"
         android:layout_height="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
         android:background="?android:attr/listDivider"
-        app:layout_constraintTop_toBottomOf="@+id/toggleButton"
-        tools:layout_editor_absoluteX="1dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton" />
 
     <CheckBox
         android:id="@+id/checkBox"
@@ -141,9 +149,11 @@
         android:id="@+id/divider5"
         android:layout_width="409dp"
         android:layout_height="1dp"
+        android:layout_marginEnd="2dp"
         android:background="?android:attr/listDivider"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2"
-        tools:layout_editor_absoluteX="1dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -190,10 +200,13 @@
         android:id="@+id/divider6"
         android:layout_width="409dp"
         android:layout_height="1dp"
+        android:layout_marginStart="1dp"
         android:layout_marginTop="12dp"
+        android:layout_marginEnd="1dp"
         android:background="?android:attr/listDivider"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        tools:layout_editor_absoluteX="1dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <TextView
         android:id="@+id/textView4"
@@ -202,7 +215,7 @@
         android:layout_marginTop="16dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintHorizontal_bias="0.129"
         app:layout_constraintStart_toEndOf="@+id/seekBar"
         app:layout_constraintTop_toBottomOf="@+id/divider6" />
 
@@ -210,9 +223,12 @@
         android:id="@+id/divider7"
         android:layout_width="409dp"
         android:layout_height="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
         android:background="?android:attr/listDivider"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="479dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
     <RatingBar
         android:id="@+id/ratingBar"
@@ -228,10 +244,12 @@
         android:id="@+id/divider8"
         android:layout_width="409dp"
         android:layout_height="1dp"
+        android:layout_marginStart="3dp"
         android:layout_marginTop="12dp"
         android:background="?android:attr/listDivider"
-        app:layout_constraintTop_toBottomOf="@+id/ratingBar"
-        tools:layout_editor_absoluteX="3dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
 
     <EditText
         android:id="@+id/editTextText"
