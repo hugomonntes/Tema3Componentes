@@ -7,11 +7,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.SeekBar;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -26,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     SeekBar sb;
     TextView txv;
 
+    Switch sw;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         cb = findViewById(R.id.checkBox3);
         sb = findViewById(R.id.seekBar);
         txv = findViewById(R.id.textView4);
+        sw = findViewById(R.id.switch1);
 
         tb.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +65,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
 
+            }
+        });
+
+        sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(@NonNull CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    sw.setText("Activado");
+                } else {
+                    sw.setText("Desactivado");
+                }
             }
         });
 
