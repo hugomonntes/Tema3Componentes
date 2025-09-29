@@ -37,15 +37,6 @@ public class MainActivity extends AppCompatActivity {
         cb = findViewById(R.id.checkBox3);
         sb = findViewById(R.id.seekBar);
         txv = findViewById(R.id.textView4);
-        /*tb.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus){
-                    cb.setActivated(true);
-                }
-                cb.setActivated(false);
-            }
-        });*/
 
         tb.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,10 +45,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        sb.setOnScrollChangeListener(new View.OnScrollChangeListener() {
+        sb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
-            public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-                txv.setText(v.getScrollX());
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                txv.setText(sb.getProgress() + "");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
             }
         });
 
