@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -29,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
     SeekBar sb;
     TextView txv;
 
+    RadioButton rb1;
+    RadioButton rb2;
+
     Switch sw;
 
     @Override
@@ -43,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
         sb = findViewById(R.id.seekBar);
         txv = findViewById(R.id.textView4);
         sw = findViewById(R.id.switch1);
+        rb1 = findViewById(R.id.radioButton);
+        rb2 = findViewById(R.id.radioButton2);
 
         tb.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +85,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tb.setChecked(false);
+                rb1.setChecked(false);
+                rb2.setChecked(false);
+            }
+        });
+
+         /*Al pulsar el botón superior el valor se
+        reinicien los valores de los elementos: el
+        toogle button, los checkboxes, los radio
+        button y el switch pasen a estar no
+        marcados.
+
+        El seekbar pase a tener un
+        valor de 0. El rating bar pase a tener 0
+        estrellas seleccionadas y se borre el
+        texto que pueda tener el editText.
+·       Al pulsar el botón con imagen el texto
+        adyacente se sustituye por un contador
+        cuyo valor se incrementa cada vez que
+        se pulsa el botón.
+·       Si el segundo checkbox está marcado al
+        pulsar el botón el valor del contador decrece.
+·       Al pulsar un RadioButton se muestre un Toast informando del
+        RadioButton pulsado*/
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
