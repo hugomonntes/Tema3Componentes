@@ -75,10 +75,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="204dp"
         android:text="@string/boton"
         app:icon="?attr/actionModeCopyDrawable"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
     <View
@@ -119,8 +118,8 @@
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:button="@android:drawable/btn_star_big_off"
         android:text="CheckBox"
-        app:buttonIcon="@android:drawable/btn_star"
         app:buttonIconTint="#673AB7"
         app:layout_constraintEnd_toStartOf="@+id/checkBox2"
         app:layout_constraintStart_toStartOf="parent"

@@ -112,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
                     ch3.setChecked(false);
                     rb1.setChecked(false);
                     rb2.setChecked(false);
+                    tv2.setText("");
                 if (sb.getProgress()!=0){
                     sb.setProgress(0);
                 }
@@ -134,10 +135,10 @@ public class MainActivity extends AppCompatActivity {
 
                 if (ch2.isChecked()){
                     contador--;
-                    btt2.setText(contador+"");
+                    tv2.setText(contador+"");
                 }else{
                     contador++;
-                    btt2.setText(contador+"");
+                    tv2.setText(contador+"");
                 }
             }
 
