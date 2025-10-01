@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Componentes do tema 3</string>
+    <string name="boton">Boton en Galego</string>
+    <string name="desactivado">Desactivado</string>
+    <string name="resultado">Barcelona</string>
+    <string name="activado">Activado en Galego</string>
+    <string name="radios">Boton Radio en Galego</string>
+    <string name="introdcir">Pon o teu nome</string>
+</resources>

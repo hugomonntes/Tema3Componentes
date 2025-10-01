@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Tema3Componentes</string>
+    <string name="activado">Activado</string>
+    <string name="boton">Boton</string>
+    <string name="desactivado">Desctivado</string>
+    <string name="resultado">Barca</string>
+    <string name="radios">Boton Radio</string>
+    <string name="introdcir">Introduce tu nombre</string>
 </resources>

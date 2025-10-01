@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Theme 3 Components</string>
+    <string name="boton">Button</string>
+    <string name="desactivado">OFF</string>
+    <string name="resultado">Barcelona EN</string>
+    <string name="activado">ON</string>
+    <string name="radios">Radio Button</string>
+    <string name="introdcir">Put your name</string>
+</resources>
