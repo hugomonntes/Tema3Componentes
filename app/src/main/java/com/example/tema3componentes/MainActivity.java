@@ -1,5 +1,6 @@
 package com.example.tema3componentes;
 
+import android.content.Intent;
 import android.hardware.biometrics.PromptContentItemPlainText;
 import android.os.Bundle;
 import android.view.View;
@@ -131,8 +132,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-
-
                 if (ch2.isChecked()){
                     contador--;
                     tv2.setText(contador+"");
@@ -140,8 +139,10 @@ public class MainActivity extends AppCompatActivity {
                     contador++;
                     tv2.setText(contador+"");
                 }
-            }
 
+                Intent i = getIntent();
+                i.putExtra("Rating", rt.getRating());
+            }
         });
 
         rb1.setOnClickListener(new View.OnClickListener() {
