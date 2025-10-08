@@ -25,13 +25,13 @@ public class Secundaria extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        rb = findViewById(R.id.ratingBar);
+        rb = findViewById(R.id.ratingBar2);
         btn3 = findViewById(R.id.button3);
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = getIntent();
-                intent.putExtra("Rating", )
+                intent.putExtra("Rating", intent);
             }
         });
     }
