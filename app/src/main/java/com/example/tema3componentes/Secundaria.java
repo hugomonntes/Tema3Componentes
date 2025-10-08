@@ -30,8 +30,10 @@ public class Secundaria extends AppCompatActivity {
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = getIntent();
-                intent.putExtra("Rating", intent);
+                Intent throwActivity = new Intent(Secundaria.this, MainActivity.class);
+                throwActivity.putExtra("Rating", rb.getRating());
+                startActivity(throwActivity);
+                rb.setRating(throwActivity.getFloatExtra("Rating", 3));
             }
         });
     }
