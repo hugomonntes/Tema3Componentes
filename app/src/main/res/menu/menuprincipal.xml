@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
         android:id="@+id/sub"
-        android:title="sub" >
-        <menu >
+        android:title="sub"
+        app:showAsAction="always">
+        <menu>
             <item
                 android:id="@+id/opc1"
                 android:title="opc1" />
@@ -18,8 +20,10 @@
         android:title="editar" />
     <item
         android:id="@+id/borrar"
-        android:title="borrar" />
+        android:title="borrar"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/nuevo"
-        android:title="nuevo" />
+        android:title="nuevo"
+        app:showAsAction="withText" />
 </menu>

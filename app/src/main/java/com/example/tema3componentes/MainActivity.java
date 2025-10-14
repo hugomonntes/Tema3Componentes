@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
     RadioButton rb1;
     RadioButton rb2;
     Toolbar toolbar;
+    MenuItem nuevo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         rb2=findViewById(R.id.radioButton2);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        nuevo = findViewById(R.id.nuevo);
         tb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -193,6 +195,13 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id=item.getItemId();
         if (id==R.id.nuevo){
+            if (ch1.isChecked()){
+                Log.i("Ch1 is checked", "Ch1 is checked");
+            } else if (ch2.isChecked()){
+                Log.i("Ch2 is checked", "Ch2 is checked");
+            }  else if (ch3.isChecked()){
+                Log.i("Ch3 is checked", "Ch3 is checked");
+            }
             Toast.makeText(this, "Nuevo", Toast.LENGTH_SHORT).show();
             return true;
         }else if (id==R.id.editar){
