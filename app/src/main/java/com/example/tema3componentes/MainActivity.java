@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.hardware.biometrics.PromptContentItemPlainText;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -22,7 +25,9 @@ import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -45,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
     RadioButton rb1;
     RadioButton rb2;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +78,8 @@ public class MainActivity extends AppCompatActivity {
         ibtt=findViewById(R.id.imageButton);
         rb1=findViewById(R.id.radioButton);
         rb2=findViewById(R.id.radioButton2);
-
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         tb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -173,7 +180,32 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "radioButton 2", Toast.LENGTH_SHORT).show();
             }
         });
+    }
 
+    @Override
+    public boolean onCreateOptionsMenu (Menu menu){
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menuprincipal, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id=item.getItemId();
+        if (id==R.id.nuevo){
+            Toast.makeText(this, "Nuevo", Toast.LENGTH_SHORT).show();
+            return true;
+        }else if (id==R.id.editar){
+            Toast.makeText(this, "Editar", Toast.LENGTH_SHORT).show();
+            return true;
+        }else if (id==R.id.borrar){
+            Toast.makeText(this, "Borrar", Toast.LENGTH_SHORT).show();
+            return true;
+        }else if (id==R.id.sub){
+            Toast.makeText(this, "Sub", Toast.LENGTH_SHORT).show();
+            return true;
+        };
+        return super.onOptionsItemSelected(item);
     }
 
 }
