@@ -26,6 +26,7 @@ import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
@@ -81,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
         rb2=findViewById(R.id.radioButton2);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+
         nuevo = findViewById(R.id.nuevo);
         tb.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -138,6 +141,12 @@ public class MainActivity extends AppCompatActivity {
                     ett.setText("");
                 }
                 btt2.setText("Button");
+
+                if (actionBar.isShowing()){
+                    actionBar.hide();
+                } else {
+                    actionBar.show();
+                }
             }
         });
 
