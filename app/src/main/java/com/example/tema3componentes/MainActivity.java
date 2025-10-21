@@ -83,7 +83,8 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
-
+        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+        startActivity(intent);
         nuevo = findViewById(R.id.nuevo);
         tb.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -221,6 +222,9 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }else if (id==R.id.sub){
             Toast.makeText(this, "Sub", Toast.LENGTH_SHORT).show();
+            return true;
+        }else if(id == android.R.id.home){
+            onBackPressed();
             return true;
         };
         return super.onOptionsItemSelected(item);

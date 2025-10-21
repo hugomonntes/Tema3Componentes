@@ -1,16 +1,26 @@
 package com.example.tema3componentes;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import  androidx.appcompat.widget.Toolbar;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity2 extends AppCompatActivity {
-    TextView tv;
+    Toolbar tlb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +32,19 @@ public class MainActivity2 extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        tlb = findViewById(R.id.toolbar2);
+        setSupportActionBar(tlb);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Activity 2");
+        actionBar.setDisplayHomeAsUpEnabled(true);
+    }
 
-        tv = findViewById(R.id.textView3);
-        tv.setText(getString(R.string.app_name));
-        tv.setBackgroundColor(getColor(R.color.red));
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+         if(item.getItemId() == android.R.id.home){
+            onBackPressed();
+            return true;
+        };
+        return super.onOptionsItemSelected(item);
     }
 }
